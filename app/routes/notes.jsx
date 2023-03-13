@@ -1,9 +1,13 @@
-import { Link } from "@remix-run/react";
+import NewNote, { links as newNoteLinks } from "~/components/NewNote";
 
 export default function NotesPage() {
   return (
     <main id="content">
-      <h1>My Notes</h1>
+      <NewNote />
     </main>
   );
+}
+
+export function links() {
+  return [...newNoteLinks()];
 }
